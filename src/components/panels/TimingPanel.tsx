@@ -1,6 +1,7 @@
 "use client";
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { Card, Legend } from "@/components/ui";
+import WeatherOutlook from "./WeatherOutlook";
 import { type Scenario, timingTable, bestLaunchMonth, MONTHS_LONG } from "@/lib/model";
 
 const tip = { contentStyle: { fontSize: 12, borderRadius: 8, border: "1px solid var(--line)" } };
@@ -29,6 +30,7 @@ export default function TimingPanel({ scenario, onPick }: { scenario: Scenario; 
       <p className="text-xs text-ink-2 mt-2">
         <strong className="text-ink">Best window: {best.label}.</strong> The three months after a {best.label} launch average an index of {best.rampIndex}, the highest ramp in the year, and {best.promos === 0 ? "no competitor promo lands that month" : `${best.promos} competitor promo(s) land that month`}. Your pick, {MONTHS_LONG[scenario.launchMonth - 1]}, gives a ramp index of {chosen.rampIndex}{chosen.promos ? ` with ${chosen.promos} competitor promo(s) in the same month` : ""}. Home-market sales follow the same curve (index {rows.map((r) => r.homeIndex).slice(4, 8).join("/")} for May–Aug), so the seasonality file is trustworthy for Germany. A January launch would have the brand ramping into the two weakest months, straight into February&apos;s promo cluster.
       </p>
+      <WeatherOutlook />
     </Card>
   );
 }
