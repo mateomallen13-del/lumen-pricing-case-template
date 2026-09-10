@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
-import { PRESETS, evaluate, sanitize, type Scenario, type Channel, type MarketingChannel, cacFor, fmtEur, MARKETING_CHANNELS, D } from "@/lib/model";
+import { PRESETS, evaluate, sanitize, type Scenario, type Channel, type MarketingChannel, cacFor, fmtEur, MARKETING_CHANNELS, D, scenarioToQuery, scenarioFromQuery } from "@/lib/model";
 import { Card, MixSliders, Slider } from "@/components/ui";
 import Headline from "@/components/panels/Headline";
 import PricingPanel from "@/components/panels/PricingPanel";
@@ -10,6 +10,10 @@ import TimingPanel from "@/components/panels/TimingPanel";
 import CityPanel from "@/components/panels/CityPanel";
 import DataNotesPanel from "@/components/panels/DataNotesPanel";
 import MemoPanel from "@/components/panels/MemoPanel";
+import ComparisonPanel from "@/components/panels/ComparisonPanel";
+import SensitivityPanel from "@/components/panels/SensitivityPanel";
+import CalibrationPanel from "@/components/panels/CalibrationPanel";
+import RoadmapPanel from "@/components/panels/RoadmapPanel";
 
 export const CHANNEL_COLORS: Record<Channel, string> = { "DTC Online": "var(--s-dtc)", "Retail/Grocery": "var(--s-retail)", "Gym & Office": "var(--s-gym)" };
 const MKT_COLORS: Record<MarketingChannel, string> = { "Referral / Subscription": "var(--s-dtc)", "Influencer / Content": "var(--s-retail)", "Paid Social": "var(--s-gym)", "Retail Sampling": "var(--s-4)" };
@@ -18,11 +22,15 @@ const STORAGE_KEY = "lumen-cockpit-scenario-v1";
 export default function Cockpit() {
   const [scenario, setScenario] = useState<Scenario>(PRESETS.recommended.scenario);
   const [loaded, setLoaded] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
 
   // Restore the last scenario after hydration (per-browser convenience only, nothing is sent anywhere).
   useEffect(() => {
     const t = setTimeout(() => {
-      try { const raw = localStorage.getItem(STORAGE_KEY); if (raw) setScenario(sanitize({ ...PRESETS.recommended.scenario, ...JSON.parse(raw) })); } catch { /* no stored scenario or storage blocked: keep the default */ }
+      // A shared link wins over the locally remembered scenario.
+      const fromUrl = scenarioFromQuery(window.location.search.slice(1), PRESETS.recommended.scenario);
+      if (fromUrl) setScenario(fromUrl);
+      else { try { const raw = localStorage.getItem(STORAGE_KEY); if (raw) setScenario(sanitize({ ...PRESETS.recommended.scenario, ...JSON.parse(raw) })); } catch { /* no stored scenario or storage blocked: keep the default */ } }
       setLoaded(true);
     }, 0);
     return () => clearTimeout(t);
@@ -31,6 +39,14 @@ export default function Cockpit() {
 
   const result = useMemo(() => evaluate(scenario), [scenario]);
   const set = (patch: Partial<Scenario>) => setScenario((s) => sanitize({ ...s, ...patch }));
+  const copyLink = async () => {
+    try {
+      const url = `${window.location.origin}${window.location.pathname}?${scenarioToQuery(scenario)}`;
+      window.history.replaceState(null, "", url);
+      await navigator.clipboard.writeText(url);
+      setLinkCopied(true); setTimeout(() => setLinkCopied(false), 1500);
+    } catch { setLinkCopied(false); }
+  };
   const activePreset = (Object.keys(PRESETS) as (keyof typeof PRESETS)[]).find((k) => JSON.stringify(sanitize(PRESETS[k].scenario)) === JSON.stringify(sanitize(scenario)));
 
   return (
@@ -41,13 +57,14 @@ export default function Cockpit() {
           <h1 className="text-2xl sm:text-3xl font-semibold leading-tight">Germany Launch Cockpit</h1>
           <p className="text-sm text-ink-2 mt-1 max-w-2xl">Move the price and the channel mix, and watch what it does to acceptance, margin, and the months it takes to pay back a customer. Built for Freya&apos;s question: where is the real CMO/CFO trade-off?</p>
         </div>
-        <div className="flex flex-wrap gap-2" role="group" aria-label="Scenario presets">
+        <div className="flex flex-wrap gap-2 items-center" role="group" aria-label="Scenario presets">
           {(Object.keys(PRESETS) as (keyof typeof PRESETS)[]).map((k) => (
             <button key={k} onClick={() => setScenario(sanitize(PRESETS[k].scenario))} title={PRESETS[k].blurb}
               className={`text-sm px-3 py-1.5 rounded-lg border transition ${activePreset === k ? "bg-ink text-white border-ink" : "bg-card border-line hover:border-ink-3"}`}>
               {PRESETS[k].label}
             </button>
           ))}
+          <button onClick={copyLink} className="text-sm px-3 py-1.5 rounded-lg border border-dashed border-line bg-card hover:border-ink-3" title="Copy a link that opens exactly this scenario">{linkCopied ? "Link copied" : "Share scenario"}</button>
         </div>
       </header>
 
@@ -74,13 +91,17 @@ export default function Cockpit() {
 
         <div className="space-y-5 min-w-0">
           <TradeoffPanel scenario={scenario} result={result} />
+          <ComparisonPanel scenario={scenario} result={result} />
           <PricingPanel result={result} />
           <ChannelPanel result={result} />
           <div className="grid gap-5 md:grid-cols-2">
             <TimingPanel scenario={scenario} onPick={(m) => set({ launchMonth: m })} />
             <CityPanel price={scenario.price} />
           </div>
+          <SensitivityPanel scenario={scenario} result={result} />
+          <RoadmapPanel scenario={scenario} result={result} />
           <MemoPanel scenario={scenario} result={result} />
+          <CalibrationPanel />
           <DataNotesPanel />
         </div>
       </div>

@@ -204,3 +204,87 @@ export function cityRanking(price: number) {
 export const fmtEur = (x: number, d = 2) => (Number.isFinite(x) ? `€${x.toLocaleString("en-GB", { minimumFractionDigits: d, maximumFractionDigits: d })}` : "n/a");
 export const fmtPct = (x: number, d = 0) => (Number.isFinite(x) ? `${(x * 100).toFixed(d)}%` : "n/a");
 export const fmtInt = (x: number) => (Number.isFinite(x) ? Math.round(x).toLocaleString("en-GB") : "n/a");
+
+// ---------- Calibration: does the model reproduce what we already know? ----------
+/** Home-market channel mix by units sold (Exhibit 6, after de-duplication). */
+export function homeChannelMix(): Record<Channel, number> {
+  const tot = derived.sales.byCountryChannel.reduce((a, r) => a + r.units, 0);
+  const mix = { "DTC Online": 0, "Retail/Grocery": 0, "Gym & Office": 0 } as Record<Channel, number>;
+  for (const r of derived.sales.byCountryChannel) mix[r.channel as Channel] += r.units / tot;
+  return mix;
+}
+export function calibration() {
+  const mix = homeChannelMix();
+  const net = CHANNELS.reduce((a, c) => a + mix[c] * netPrice(HOME_PRICE, c), 0);
+  const contribution = net - COGS;
+  const exhibit11 = derived.priceTests.map((t) => ({ ...t, modelNet: netPrice(t.price, t.channel as Channel), modelContribution: unitContribution(t.price, t.channel as Channel), modelAcceptance: acceptance(t.price) }));
+  return { homePrice: HOME_PRICE, homeMix: mix, homeNet: net, homeContribution: contribution, homeMarginModel: contribution / net, homeMarginReported: derived.costs.homeGrossMarginPct / 100, exhibit11 };
+}
+
+// ---------- Sensitivity: one-at-a-time swings on the year-one result ----------
+export type Sensitivity = { driver: string; low: number; high: number; lowLabel: string; highLabel: string };
+export function sensitivity(base: Scenario): Sensitivity[] {
+  const s = sanitize(base);
+  const ref = evaluate(s).resultYear1;
+  const withOverrides = (o: Partial<Overrides>) => evaluateWith(s, o).resultYear1;
+  const rows: Sensitivity[] = [
+    { driver: "Price acceptance", low: withOverrides({ acceptanceMult: 0.8 }), high: withOverrides({ acceptanceMult: 1.2 }), lowLabel: "−20%", highLabel: "+20%" },
+    { driver: "Purchase frequency", low: withOverrides({ frequencyMult: 0.8 }), high: withOverrides({ frequencyMult: 1.2 }), lowLabel: "−20%", highLabel: "+20%" },
+    { driver: "Home-market CAC", low: withOverrides({ cacMult: 1.3 }), high: withOverrides({ cacMult: 0.7 }), lowLabel: "+30%", highLabel: "−30%" },
+    { driver: "Cost of goods", low: withOverrides({ cogsDelta: 0.1 }), high: withOverrides({ cogsDelta: -0.1 }), lowLabel: "+€0.10", highLabel: "−€0.10" },
+    { driver: "Shelf price", low: withOverrides({ priceDelta: -0.2 }), high: withOverrides({ priceDelta: 0.2 }), lowLabel: "−€0.20", highLabel: "+€0.20" },
+  ];
+  return rows.map((r) => ({ ...r, low: r.low - ref, high: r.high - ref })).sort((a, b) => Math.max(Math.abs(b.low), Math.abs(b.high)) - Math.max(Math.abs(a.low), Math.abs(a.high)));
+}
+type Overrides = { acceptanceMult: number; frequencyMult: number; cacMult: number; cogsDelta: number; lifetimeDelta: number; priceDelta: number };
+/** Same P&L as evaluate(), with explicit stress multipliers on the inputs the survey cannot pin down. */
+export function evaluateWith(input: Scenario, o: Partial<Overrides>): Result {
+  const s = sanitize({ ...input, price: input.price + (o.priceDelta ?? 0), lifetimeMonths: input.lifetimeMonths + (o.lifetimeDelta ?? 0) });
+  const cogs = COGS + (o.cogsDelta ?? 0);
+  const segs = segmentOutcomes(s.price).map((r) => ({ ...r, frequency: r.frequency * (o.frequencyMult ?? 1) }));
+  const perChannel = CHANNELS.map((c) => { const net = netPrice(s.price, c); const contribution = net - cogs; return { channel: c, share: s.channelMix[c], net, contribution, marginPct: net > 0 ? contribution / net : 0 }; });
+  const blendedNet = perChannel.reduce((a, c) => a + c.share * c.net, 0);
+  const blendedContribution = perChannel.reduce((a, c) => a + c.share * c.contribution, 0);
+  const unitsPerCustomerMonth = segs.reduce((a, r) => a + r.weight * r.frequency, 0);
+  const contributionPerCustomerMonth = unitsPerCustomerMonth * blendedContribution;
+  const cacBase = blendedCac(s.marketingMix) * (o.cacMult ?? 1);
+  const acceptanceAll = clamp(acceptance(s.price) * (o.acceptanceMult ?? 1), 0.01, 1);
+  const cac = cacBase * (acceptance(HOME_PRICE) / Math.max(acceptanceAll, 0.05));
+  const paybackMonths = contributionPerCustomerMonth > 0 ? cac / contributionPerCustomerMonth : Infinity;
+  const ltv = contributionPerCustomerMonth * s.lifetimeMonths;
+  const customersYear1 = s.marketingBudget / cac;
+  const unitsYear1 = customersYear1 * unitsPerCustomerMonth * Math.min(12, s.lifetimeMonths);
+  const netRevenueYear1 = unitsYear1 * blendedNet;
+  const contributionYear1 = unitsYear1 * blendedContribution;
+  const base = evaluate(input);
+  return { ...base, price: s.price, acceptanceAll, perChannel, blendedNet, blendedContribution, blendedMarginPct: blendedNet > 0 ? blendedContribution / blendedNet : 0, unitsPerCustomerMonth, contributionPerCustomerMonth, cacBase, cac, paybackMonths, ltv, ltvToCac: cac > 0 ? ltv / cac : 0, customersYear1, unitsYear1, netRevenueYear1, contributionYear1, resultYear1: contributionYear1 - s.marketingBudget };
+}
+
+// ---------- Scenario <-> URL (so a teammate can open exactly what you see) ----------
+const CH_KEYS: Channel[] = ["DTC Online", "Retail/Grocery", "Gym & Office"];
+export function scenarioToQuery(s: Scenario): string {
+  const p = new URLSearchParams();
+  p.set("p", s.price.toFixed(2));
+  p.set("c", CH_KEYS.map((k) => Math.round(s.channelMix[k] * 100)).join("-"));
+  p.set("m", MARKETING_CHANNELS.map((k) => Math.round(s.marketingMix[k] * 100)).join("-"));
+  p.set("b", String(Math.round(s.marketingBudget)));
+  p.set("l", String(s.lifetimeMonths));
+  p.set("t", String(s.launchMonth));
+  return p.toString();
+}
+export function scenarioFromQuery(q: string, fallback: Scenario): Scenario | null {
+  try {
+    const p = new URLSearchParams(q);
+    if (!p.has("p")) return null;
+    const nums = (key: string, n: number) => { const v = (p.get(key) ?? "").split("-").map(Number); return v.length === n && v.every(Number.isFinite) ? v : null; };
+    const c = nums("c", 3), m = nums("m", 4);
+    return sanitize({
+      price: Number(p.get("p")),
+      channelMix: c ? { "DTC Online": c[0] / 100, "Retail/Grocery": c[1] / 100, "Gym & Office": c[2] / 100 } : fallback.channelMix,
+      marketingMix: m ? { "Referral / Subscription": m[0] / 100, "Influencer / Content": m[1] / 100, "Paid Social": m[2] / 100, "Retail Sampling": m[3] / 100 } : fallback.marketingMix,
+      marketingBudget: Number(p.get("b") ?? fallback.marketingBudget),
+      lifetimeMonths: Number(p.get("l") ?? fallback.lifetimeMonths),
+      launchMonth: Number(p.get("t") ?? fallback.launchMonth),
+    });
+  } catch { return null; }
+}
