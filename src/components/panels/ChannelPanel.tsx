@@ -18,7 +18,7 @@ export default function ChannelPanel({ result: r }: { result: Result }) {
           const w = (x: number) => `${Math.max(0, (x / r.price) * 100)}%`;
           return (
             <div key={c.channel}>
-              <div className="flex justify-between text-xs mb-1">
+              <div className="channel-label flex justify-between text-xs mb-1">
                 <span className="flex items-center gap-1.5"><span className="inline-block w-2 h-2 rounded-full" style={{ background: COLORS[c.channel] }} aria-hidden />{c.channel} <span className="text-ink-3">· {Math.round(c.share * 100)}% of your mix</span></span>
                 <span className="num">nets {fmtEur(c.net)} · keeps <strong>{fmtEur(c.contribution)}</strong> ({fmtPct(c.marginPct)})</span>
               </div>
