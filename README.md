@@ -54,7 +54,7 @@ These questions aren't here to slow you down — they're part of what's being ev
 
 ## Our Approach
 
-**Live demo:** _(URL added below after deployment)_
+**Live demo:** https://lumen-germany-launch-cockpit.vercel.app
 
 **What we built.** A "Germany Launch Cockpit": one page where Freya can move the shelf price, the sales-channel mix and the marketing mix, and immediately see what it does to price acceptance, margin per can, customer acquisition cost, payback time and the year-one result. Three preset buttons show the CMO's scenario, the CFO's scenario and our recommendation side by side, and a memo generator turns whichever scenario is on screen into a one-page note.
 
