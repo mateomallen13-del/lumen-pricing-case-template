@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test tests/model.test.ts",
+    "test": "tsx --test tests/*.test.ts",
     "prepare-data": "node scripts/prepare-data.mjs"
   },
   "dependencies": {
