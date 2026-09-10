@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { PRESETS, evaluate, sanitize, type Scenario, type Channel, type MarketingChannel, cacFor, fmtEur, MARKETING_CHANNELS, D, scenarioToQuery, scenarioFromQuery } from "@/lib/model";
 import { Card, MixSliders, Slider } from "@/components/ui";
 import Headline from "@/components/panels/Headline";
@@ -22,6 +22,8 @@ const STORAGE_KEY = "lumen-cockpit-scenario-v1";
 export default function Cockpit() {
   const [scenario, setScenario] = useState<Scenario>(PRESETS.recommended.scenario);
   const [loaded, setLoaded] = useState(false);
+  const [leversOpen, setLeversOpen] = useState(false);
+  const leversToggle = useRef<HTMLButtonElement>(null);
   const [linkCopied, setLinkCopied] = useState(false);
 
   // Restore the last scenario after hydration (per-browser convenience only, nothing is sent anywhere).
@@ -50,7 +52,7 @@ export default function Cockpit() {
   const activePreset = (Object.keys(PRESETS) as (keyof typeof PRESETS)[]).find((k) => JSON.stringify(sanitize(PRESETS[k].scenario)) === JSON.stringify(sanitize(scenario)));
 
   return (
-    <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-5">
+    <main className="cockpit flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-5">
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <p className="text-xs uppercase tracking-wide text-ink-3">LUMEN · Strategy &amp; Analytics · Germany market entry</p>
@@ -71,23 +73,39 @@ export default function Cockpit() {
       <Headline result={result} scenario={scenario} />
 
       <div className="grid gap-5 lg:grid-cols-[320px_minmax(0,1fr)]">
-        <Card title="Your levers" subtitle="Everything below recomputes live. Values are per 330 ml can." className="lg:sticky lg:top-4 self-start">
-          <div className="space-y-5">
-            <Slider label="Shelf price" value={scenario.price} min={1.2} max={3.2} step={0.01} onChange={(v) => set({ price: v })} format={(v) => fmtEur(v)} />
-            <div className="flex gap-2 text-xs">
-              {[1.79, 2.19, 2.59].map((p) => (
-                <button key={p} onClick={() => set({ price: p })} className={`px-2 py-1 rounded border ${Math.abs(scenario.price - p) < 0.005 ? "bg-ink text-white border-ink" : "border-line hover:border-ink-3"}`}>{fmtEur(p)}</button>
-              ))}
-              <span className="text-ink-3 self-center">Exhibit 11 candidates</span>
-            </div>
-            <MixSliders label="Sales channel mix (share of cans)" mix={scenario.channelMix} colors={CHANNEL_COLORS} onChange={(m) => set({ channelMix: m })} hint="Exhibit 9" />
-            <MixSliders label="Marketing budget mix" mix={scenario.marketingMix} colors={MKT_COLORS} onChange={(m) => set({ marketingMix: m })} hint="Exhibit 7" />
-            <p className="text-[11px] text-ink-3 -mt-2">Home-market CAC: {MARKETING_CHANNELS.map((k) => `${k.split(" /")[0]} ${fmtEur(cacFor(k), 0)}`).join(" · ")}</p>
-            <Slider label="Launch-year marketing budget" value={scenario.marketingBudget} min={50_000} max={1_000_000} step={10_000} onChange={(v) => set({ marketingBudget: v })} format={(v) => fmtEur(v, 0)} />
-            <Slider label="Assumed customer lifetime" value={scenario.lifetimeMonths} min={3} max={36} step={1} onChange={(v) => set({ lifetimeMonths: v })} format={(v) => `${v} months`} />
-            <p className="text-[11px] text-ink-3">Fixed inputs: COGS {fmtEur(D.costs.cogsTotal)} per can (Exhibit 8), channel cuts from Exhibit 9, acceptance from the {D.vanWestendorp.n}-person Van Westendorp survey (Exhibit 10), purchase frequency and intent from the {D.sourceNotes.surveyRespondents}-person German survey (Exhibit 4).</p>
+        <aside className={`levers-drawer lg:sticky lg:top-4 self-start ${leversOpen ? "is-open" : ""}`}
+          aria-label="Scenario levers"
+          onKeyDown={(event) => {
+            if (event.key === "Escape" && leversOpen) {
+              setLeversOpen(false);
+              leversToggle.current?.focus();
+            }
+          }}>
+          <button ref={leversToggle} type="button" className="levers-toggle"
+            aria-expanded={leversOpen} aria-controls="levers-content"
+            onClick={() => setLeversOpen((open) => !open)}>
+            <span>Levers</span><span aria-hidden="true">{leversOpen ? "Close ↓" : "Adjust ↑"}</span>
+          </button>
+          <div id="levers-content" className="levers-content">
+            <Card title="Your levers" subtitle="Everything below recomputes live. Values are per 330 ml can.">
+              <div className="space-y-5">
+                <Slider label="Shelf price" value={scenario.price} min={1.2} max={3.2} step={0.01} onChange={(v) => set({ price: v })} format={(v) => fmtEur(v)} />
+                <div className="flex gap-2 text-xs">
+                  {[1.79, 2.19, 2.59].map((p) => (
+                    <button key={p} onClick={() => set({ price: p })} className={`px-2 py-1 rounded border ${Math.abs(scenario.price - p) < 0.005 ? "bg-ink text-white border-ink" : "border-line hover:border-ink-3"}`}>{fmtEur(p)}</button>
+                  ))}
+                  <span className="text-ink-3 self-center">Exhibit 11 candidates</span>
+                </div>
+                <MixSliders label="Sales channel mix (share of cans)" mix={scenario.channelMix} colors={CHANNEL_COLORS} onChange={(m) => set({ channelMix: m })} hint="Exhibit 9" />
+                <MixSliders label="Marketing budget mix" mix={scenario.marketingMix} colors={MKT_COLORS} onChange={(m) => set({ marketingMix: m })} hint="Exhibit 7" />
+                <p className="text-[11px] text-ink-3 -mt-2">Home-market CAC: {MARKETING_CHANNELS.map((k) => `${k.split(" /")[0]} ${fmtEur(cacFor(k), 0)}`).join(" · ")}</p>
+                <Slider label="Launch-year marketing budget" value={scenario.marketingBudget} min={50_000} max={1_000_000} step={10_000} onChange={(v) => set({ marketingBudget: v })} format={(v) => fmtEur(v, 0)} />
+                <Slider label="Assumed customer lifetime" value={scenario.lifetimeMonths} min={3} max={36} step={1} onChange={(v) => set({ lifetimeMonths: v })} format={(v) => `${v} months`} />
+                <p className="text-[11px] text-ink-3">Fixed inputs: COGS {fmtEur(D.costs.cogsTotal)} per can (Exhibit 8), channel cuts from Exhibit 9, acceptance from the {D.vanWestendorp.n}-person Van Westendorp survey (Exhibit 10), purchase frequency and intent from the {D.sourceNotes.surveyRespondents}-person German survey (Exhibit 4).</p>
+              </div>
+            </Card>
           </div>
-        </Card>
+        </aside>
 
         <div className="space-y-5 min-w-0">
           <TradeoffPanel scenario={scenario} result={result} />

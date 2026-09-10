@@ -12,7 +12,7 @@ export default function SensitivityPanel({ scenario, result }: { scenario: Scena
     <Card title="How wrong can we be" subtitle={`One input at a time, everything else as in your scenario. Bars show the change in the year-one result (base ${fmtEur(result.resultYear1, 0)}).`}>
       <div className="space-y-2">
         {rows.map((r) => (
-          <div key={r.driver} className="grid grid-cols-[7rem_5.5rem_minmax(0,1fr)_5.5rem] items-center gap-2 text-xs">
+          <div key={r.driver} className="sensitivity-row grid grid-cols-[7rem_5.5rem_minmax(0,1fr)_5.5rem] items-center gap-2 text-xs">
             <span className="text-ink-2 truncate">{r.driver}</span>
             <span className="text-[10px] text-ink-3 num text-right whitespace-nowrap">{r.lowLabel} {fmtEur(r.low, 0)}</span>
             <div className="relative h-5">
