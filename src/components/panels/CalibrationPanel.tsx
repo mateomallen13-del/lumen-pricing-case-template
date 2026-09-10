@@ -9,6 +9,7 @@ export default function CalibrationPanel() {
       <div className="grid gap-4 md:grid-cols-2 text-xs text-ink-2">
         <div>
           <p className="mb-2"><strong className="text-ink">Home markets, 2025–26.</strong> Apply the channel cuts (Exhibit 9) and the cost of goods (Exhibit 8) to the actual home shelf price of {fmtEur(c.homePrice)} and the actual home channel mix from 78 weeks of sales (Exhibit 6):</p>
+          <div className="overflow-x-auto">
           <table className="w-full num">
             <tbody>
               <tr className="border-t border-line"><td className="py-1">Channel mix by units</td><td className="text-right">{Object.entries(c.homeMix).map(([k, v]) => `${k.replace(" Online", "").replace("/Grocery", "")} ${Math.round(v * 100)}%`).join(" · ")}</td></tr>
@@ -18,6 +19,7 @@ export default function CalibrationPanel() {
               <tr className="border-t border-line font-semibold text-ink"><td className="py-1">Gross margin, reported (Exhibit 8)</td><td className="text-right">{fmtPct(c.homeMarginReported, 1)}</td></tr>
             </tbody>
           </table>
+          </div>
           <p className="mt-2">The model lands on the reported margin to the decimal. The German answer uses the same machinery with German prices and a German channel mix.</p>
         </div>
         <div>

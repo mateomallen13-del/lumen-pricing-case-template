@@ -11,7 +11,7 @@ export default function CityPanel({ price }: { price: number }) {
     <Card title="Which city first" subtitle="Market size × growth (Exhibit 1) × purchase intent and share of buying segments in that city (Exhibit 4), at the current price.">
       <ol className="space-y-2">
         {cities.map((c, i) => (
-          <li key={c.city} className="grid grid-cols-[1.25rem_5.5rem_minmax(0,1fr)_auto] items-center gap-2 text-xs">
+          <li key={c.city} className="city-row grid grid-cols-[1.25rem_5.5rem_minmax(0,1fr)_auto] items-center gap-2 text-xs">
             <span className="text-ink-3 num">{i + 1}</span>
             <span className="font-medium">{c.city}</span>
             <div className="h-4 rounded overflow-hidden bg-line/40"><div className="h-full rounded" style={{ width: `${(c.score / max) * 100}%`, background: i < 3 ? "var(--s-dtc)" : "var(--ink-3)" }} /></div>
