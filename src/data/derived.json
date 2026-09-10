@@ -1,0 +1,3284 @@
+{
+ "generatedAt": "2026-09-10T13:04:40.332Z",
+ "sourceNotes": {
+  "piiColumnsDropped": [
+   "first_name",
+   "last_name",
+   "email"
+  ],
+  "surveyRespondents": 420,
+  "salesDuplicatesRemoved": 4,
+  "salesRowsKept": 702,
+  "salesOutlierWeeks": [
+   {
+    "week": "2025-07-28",
+    "country": "Denmark",
+    "channel": "Gym & Office",
+    "units": 1371,
+    "median": 726,
+    "z": 3.15,
+    "promo": false
+   }
+  ],
+  "homeMarkets": [
+   "Netherlands",
+   "Denmark",
+   "Sweden"
+  ],
+  "salesPeriod": {
+   "from": "2025-01-06",
+   "to": "2026-06-29"
+  }
+ },
+ "segments": [
+  "Urban Wellness Professionals",
+  "Fitness & Gym-Goers",
+  "On-the-go Commuters",
+  "Students & Budget-Conscious"
+ ],
+ "channels": [
+  "DTC Online",
+  "Retail/Grocery",
+  "Gym & Office"
+ ],
+ "cities": [
+  "Berlin",
+  "Munich",
+  "Hamburg",
+  "Cologne",
+  "Frankfurt",
+  "Other Germany"
+ ],
+ "segmentStats": [
+  {
+   "segment": "Urban Wellness Professionals",
+   "n": 112,
+   "share": 0.267,
+   "purchaseFrequencyPerMonth": 7.56,
+   "monthlySpendEur": 21.73,
+   "priceSensitivity": 3.63,
+   "purchaseIntent": 9.12,
+   "channelPreference": {
+    "DTC Online": 0.536,
+    "Retail/Grocery": 0.321,
+    "Gym & Office": 0.143
+   },
+   "awareness": {
+    "PulsUp": 0.35,
+    "Mate Libre": 0.46,
+    "VoltFit": 0.49,
+    "Root & Rise": 0.65
+   },
+   "cityMix": {
+    "Berlin": 27,
+    "Munich": 13,
+    "Hamburg": 13,
+    "Cologne": 16,
+    "Frankfurt": 6,
+    "Other Germany": 37
+   }
+  },
+  {
+   "segment": "Fitness & Gym-Goers",
+   "n": 83,
+   "share": 0.198,
+   "purchaseFrequencyPerMonth": 6.23,
+   "monthlySpendEur": 20.11,
+   "priceSensitivity": 5.44,
+   "purchaseIntent": 7.97,
+   "channelPreference": {
+    "DTC Online": 0.169,
+    "Retail/Grocery": 0.386,
+    "Gym & Office": 0.446
+   },
+   "awareness": {
+    "PulsUp": 0.53,
+    "Mate Libre": 0.35,
+    "VoltFit": 0.77,
+    "Root & Rise": 0.33
+   },
+   "cityMix": {
+    "Berlin": 14,
+    "Munich": 11,
+    "Hamburg": 11,
+    "Cologne": 6,
+    "Frankfurt": 9,
+    "Other Germany": 32
+   }
+  },
+  {
+   "segment": "On-the-go Commuters",
+   "n": 90,
+   "share": 0.214,
+   "purchaseFrequencyPerMonth": 5.87,
+   "monthlySpendEur": 19.97,
+   "priceSensitivity": 5.98,
+   "purchaseIntent": 6.71,
+   "channelPreference": {
+    "DTC Online": 0.167,
+    "Retail/Grocery": 0.6,
+    "Gym & Office": 0.233
+   },
+   "awareness": {
+    "PulsUp": 0.77,
+    "Mate Libre": 0.42,
+    "VoltFit": 0.26,
+    "Root & Rise": 0.17
+   },
+   "cityMix": {
+    "Berlin": 19,
+    "Munich": 16,
+    "Hamburg": 10,
+    "Cologne": 6,
+    "Frankfurt": 7,
+    "Other Germany": 32
+   }
+  },
+  {
+   "segment": "Students & Budget-Conscious",
+   "n": 135,
+   "share": 0.321,
+   "purchaseFrequencyPerMonth": 5.1,
+   "monthlySpendEur": 17.24,
+   "priceSensitivity": 7.93,
+   "purchaseIntent": 5.5,
+   "channelPreference": {
+    "DTC Online": 0.222,
+    "Retail/Grocery": 0.541,
+    "Gym & Office": 0.237
+   },
+   "awareness": {
+    "PulsUp": 0.85,
+    "Mate Libre": 0.58,
+    "VoltFit": 0.37,
+    "Root & Rise": 0.05
+   },
+   "cityMix": {
+    "Berlin": 21,
+    "Munich": 17,
+    "Hamburg": 14,
+    "Cologne": 17,
+    "Frankfurt": 10,
+    "Other Germany": 56
+   }
+  }
+ ],
+ "cityStats": [
+  {
+   "city": "Berlin",
+   "n": 81,
+   "purchaseIntent": 7.4,
+   "priceSensitivity": 5.58,
+   "purchaseFrequencyPerMonth": 6.16,
+   "segmentMix": {
+    "Urban Wellness Professionals": 27,
+    "Fitness & Gym-Goers": 14,
+    "On-the-go Commuters": 19,
+    "Students & Budget-Conscious": 21
+   }
+  },
+  {
+   "city": "Munich",
+   "n": 57,
+   "purchaseIntent": 7.3,
+   "priceSensitivity": 5.83,
+   "purchaseFrequencyPerMonth": 6.38,
+   "segmentMix": {
+    "Urban Wellness Professionals": 13,
+    "Fitness & Gym-Goers": 11,
+    "On-the-go Commuters": 16,
+    "Students & Budget-Conscious": 17
+   }
+  },
+  {
+   "city": "Hamburg",
+   "n": 48,
+   "purchaseIntent": 7.52,
+   "priceSensitivity": 5.72,
+   "purchaseFrequencyPerMonth": 6.32,
+   "segmentMix": {
+    "Urban Wellness Professionals": 13,
+    "Fitness & Gym-Goers": 11,
+    "On-the-go Commuters": 10,
+    "Students & Budget-Conscious": 14
+   }
+  },
+  {
+   "city": "Cologne",
+   "n": 45,
+   "purchaseIntent": 7.04,
+   "priceSensitivity": 5.97,
+   "purchaseFrequencyPerMonth": 6.03,
+   "segmentMix": {
+    "Urban Wellness Professionals": 16,
+    "Fitness & Gym-Goers": 6,
+    "On-the-go Commuters": 6,
+    "Students & Budget-Conscious": 17
+   }
+  },
+  {
+   "city": "Frankfurt",
+   "n": 32,
+   "purchaseIntent": 7.18,
+   "priceSensitivity": 6.12,
+   "purchaseFrequencyPerMonth": 5.95,
+   "segmentMix": {
+    "Urban Wellness Professionals": 6,
+    "Fitness & Gym-Goers": 9,
+    "On-the-go Commuters": 7,
+    "Students & Budget-Conscious": 10
+   }
+  },
+  {
+   "city": "Other Germany",
+   "n": 157,
+   "purchaseIntent": 7.05,
+   "priceSensitivity": 6.01,
+   "purchaseFrequencyPerMonth": 6.07,
+   "segmentMix": {
+    "Urban Wellness Professionals": 37,
+    "Fitness & Gym-Goers": 32,
+    "On-the-go Commuters": 32,
+    "Students & Budget-Conscious": 56
+   }
+  }
+ ],
+ "vanWestendorp": {
+  "n": 300,
+  "all": {
+   "curve": [
+    {
+     "price": 0.8,
+     "tooCheap": 0.667,
+     "cheap": 0.997,
+     "expensive": 0,
+     "tooExpensive": 0,
+     "acceptance": 1,
+     "notRejected": 1
+    },
+    {
+     "price": 0.85,
+     "tooCheap": 0.603,
+     "cheap": 0.983,
+     "expensive": 0,
+     "tooExpensive": 0,
+     "acceptance": 1,
+     "notRejected": 1
+    },
+    {
+     "price": 0.9,
+     "tooCheap": 0.527,
+     "cheap": 0.97,
+     "expensive": 0,
+     "tooExpensive": 0,
+     "acceptance": 1,
+     "notRejected": 1
+    },
+    {
+     "price": 0.95,
+     "tooCheap": 0.44,
+     "cheap": 0.953,
+     "expensive": 0,
+     "tooExpensive": 0,
+     "acceptance": 1,
+     "notRejected": 1
+    },
+    {
+     "price": 1,
+     "tooCheap": 0.38,
+     "cheap": 0.91,
+     "expensive": 0,
+     "tooExpensive": 0,
+     "acceptance": 1,
+     "notRejected": 1
+    },
+    {
+     "price": 1.05,
+     "tooCheap": 0.317,
+     "cheap": 0.86,
+     "expensive": 0,
+     "tooExpensive": 0,
+     "acceptance": 1,
+     "notRejected": 1
+    },
+    {
+     "price": 1.1,
+     "tooCheap": 0.27,
+     "cheap": 0.82,
+     "expensive": 0.003,
+     "tooExpensive": 0,
+     "acceptance": 0.997,
+     "notRejected": 1
+    },
+    {
+     "price": 1.15,
+     "tooCheap": 0.197,
+     "cheap": 0.76,
+     "expensive": 0.003,
+     "tooExpensive": 0,
+     "acceptance": 0.997,
+     "notRejected": 1
+    },
+    {
+     "price": 1.2,
+     "tooCheap": 0.143,
+     "cheap": 0.713,
+     "expensive": 0.003,
+     "tooExpensive": 0,
+     "acceptance": 0.997,
+     "notRejected": 1
+    },
+    {
+     "price": 1.25,
+     "tooCheap": 0.093,
+     "cheap": 0.673,
+     "expensive": 0.007,
+     "tooExpensive": 0,
+     "acceptance": 0.993,
+     "notRejected": 1
+    },
+    {
+     "price": 1.3,
+     "tooCheap": 0.067,
+     "cheap": 0.64,
+     "expensive": 0.007,
+     "tooExpensive": 0,
+     "acceptance": 0.993,
+     "notRejected": 1
+    },
+    {
+     "price": 1.35,
+     "tooCheap": 0.037,
+     "cheap": 0.577,
+     "expensive": 0.02,
+     "tooExpensive": 0,
+     "acceptance": 0.98,
+     "notRejected": 1
+    },
+    {
+     "price": 1.4,
+     "tooCheap": 0.02,
+     "cheap": 0.533,
+     "expensive": 0.033,
+     "tooExpensive": 0,
+     "acceptance": 0.967,
+     "notRejected": 1
+    },
+    {
+     "price": 1.45,
+     "tooCheap": 0.007,
+     "cheap": 0.5,
+     "expensive": 0.043,
+     "tooExpensive": 0,
+     "acceptance": 0.957,
+     "notRejected": 1
+    },
+    {
+     "price": 1.5,
+     "tooCheap": 0.003,
+     "cheap": 0.47,
+     "expensive": 0.067,
+     "tooExpensive": 0,
+     "acceptance": 0.933,
+     "notRejected": 1
+    },
+    {
+     "price": 1.55,
+     "tooCheap": 0,
+     "cheap": 0.43,
+     "expensive": 0.077,
+     "tooExpensive": 0,
+     "acceptance": 0.923,
+     "notRejected": 1
+    },
+    {
+     "price": 1.6,
+     "tooCheap": 0,
+     "cheap": 0.343,
+     "expensive": 0.103,
+     "tooExpensive": 0,
+     "acceptance": 0.897,
+     "notRejected": 1
+    },
+    {
+     "price": 1.65,
+     "tooCheap": 0,
+     "cheap": 0.297,
+     "expensive": 0.117,
+     "tooExpensive": 0,
+     "acceptance": 0.883,
+     "notRejected": 1
+    },
+    {
+     "price": 1.7,
+     "tooCheap": 0,
+     "cheap": 0.25,
+     "expensive": 0.17,
+     "tooExpensive": 0,
+     "acceptance": 0.83,
+     "notRejected": 1
+    },
+    {
+     "price": 1.75,
+     "tooCheap": 0,
+     "cheap": 0.197,
+     "expensive": 0.21,
+     "tooExpensive": 0,
+     "acceptance": 0.79,
+     "notRejected": 1
+    },
+    {
+     "price": 1.8,
+     "tooCheap": 0,
+     "cheap": 0.157,
+     "expensive": 0.24,
+     "tooExpensive": 0.007,
+     "acceptance": 0.76,
+     "notRejected": 0.993
+    },
+    {
+     "price": 1.85,
+     "tooCheap": 0,
+     "cheap": 0.103,
+     "expensive": 0.283,
+     "tooExpensive": 0.01,
+     "acceptance": 0.717,
+     "notRejected": 0.99
+    },
+    {
+     "price": 1.9,
+     "tooCheap": 0,
+     "cheap": 0.077,
+     "expensive": 0.303,
+     "tooExpensive": 0.017,
+     "acceptance": 0.697,
+     "notRejected": 0.983
+    },
+    {
+     "price": 1.95,
+     "tooCheap": 0,
+     "cheap": 0.043,
+     "expensive": 0.35,
+     "tooExpensive": 0.027,
+     "acceptance": 0.65,
+     "notRejected": 0.973
+    },
+    {
+     "price": 2,
+     "tooCheap": 0,
+     "cheap": 0.017,
+     "expensive": 0.383,
+     "tooExpensive": 0.043,
+     "acceptance": 0.617,
+     "notRejected": 0.957
+    },
+    {
+     "price": 2.05,
+     "tooCheap": 0,
+     "cheap": 0.01,
+     "expensive": 0.413,
+     "tooExpensive": 0.067,
+     "acceptance": 0.587,
+     "notRejected": 0.933
+    },
+    {
+     "price": 2.1,
+     "tooCheap": 0,
+     "cheap": 0.003,
+     "expensive": 0.447,
+     "tooExpensive": 0.093,
+     "acceptance": 0.553,
+     "notRejected": 0.907
+    },
+    {
+     "price": 2.15,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.473,
+     "tooExpensive": 0.12,
+     "acceptance": 0.527,
+     "notRejected": 0.88
+    },
+    {
+     "price": 2.2,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.49,
+     "tooExpensive": 0.163,
+     "acceptance": 0.51,
+     "notRejected": 0.837
+    },
+    {
+     "price": 2.25,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.533,
+     "tooExpensive": 0.203,
+     "acceptance": 0.467,
+     "notRejected": 0.797
+    },
+    {
+     "price": 2.3,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.56,
+     "tooExpensive": 0.24,
+     "acceptance": 0.44,
+     "notRejected": 0.76
+    },
+    {
+     "price": 2.35,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.573,
+     "tooExpensive": 0.287,
+     "acceptance": 0.427,
+     "notRejected": 0.713
+    },
+    {
+     "price": 2.4,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.61,
+     "tooExpensive": 0.313,
+     "acceptance": 0.39,
+     "notRejected": 0.687
+    },
+    {
+     "price": 2.45,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.65,
+     "tooExpensive": 0.34,
+     "acceptance": 0.35,
+     "notRejected": 0.66
+    },
+    {
+     "price": 2.5,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.667,
+     "tooExpensive": 0.347,
+     "acceptance": 0.333,
+     "notRejected": 0.653
+    },
+    {
+     "price": 2.55,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.707,
+     "tooExpensive": 0.373,
+     "acceptance": 0.293,
+     "notRejected": 0.627
+    },
+    {
+     "price": 2.6,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.75,
+     "tooExpensive": 0.38,
+     "acceptance": 0.25,
+     "notRejected": 0.62
+    },
+    {
+     "price": 2.65,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.787,
+     "tooExpensive": 0.407,
+     "acceptance": 0.213,
+     "notRejected": 0.593
+    },
+    {
+     "price": 2.7,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.81,
+     "tooExpensive": 0.43,
+     "acceptance": 0.19,
+     "notRejected": 0.57
+    },
+    {
+     "price": 2.75,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.837,
+     "tooExpensive": 0.463,
+     "acceptance": 0.163,
+     "notRejected": 0.537
+    },
+    {
+     "price": 2.8,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.877,
+     "tooExpensive": 0.487,
+     "acceptance": 0.123,
+     "notRejected": 0.513
+    },
+    {
+     "price": 2.85,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.91,
+     "tooExpensive": 0.53,
+     "acceptance": 0.09,
+     "notRejected": 0.47
+    },
+    {
+     "price": 2.9,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.937,
+     "tooExpensive": 0.563,
+     "acceptance": 0.063,
+     "notRejected": 0.437
+    },
+    {
+     "price": 2.95,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.96,
+     "tooExpensive": 0.59,
+     "acceptance": 0.04,
+     "notRejected": 0.41
+    },
+    {
+     "price": 3,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.97,
+     "tooExpensive": 0.613,
+     "acceptance": 0.03,
+     "notRejected": 0.387
+    },
+    {
+     "price": 3.05,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 0.987,
+     "tooExpensive": 0.637,
+     "acceptance": 0.013,
+     "notRejected": 0.363
+    },
+    {
+     "price": 3.1,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.66,
+     "acceptance": 0,
+     "notRejected": 0.34
+    },
+    {
+     "price": 3.15,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.693,
+     "acceptance": 0,
+     "notRejected": 0.307
+    },
+    {
+     "price": 3.2,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.707,
+     "acceptance": 0,
+     "notRejected": 0.293
+    },
+    {
+     "price": 3.25,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.75,
+     "acceptance": 0,
+     "notRejected": 0.25
+    },
+    {
+     "price": 3.3,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.763,
+     "acceptance": 0,
+     "notRejected": 0.237
+    },
+    {
+     "price": 3.35,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.777,
+     "acceptance": 0,
+     "notRejected": 0.223
+    },
+    {
+     "price": 3.4,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.82,
+     "acceptance": 0,
+     "notRejected": 0.18
+    },
+    {
+     "price": 3.45,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.847,
+     "acceptance": 0,
+     "notRejected": 0.153
+    },
+    {
+     "price": 3.5,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.883,
+     "acceptance": 0,
+     "notRejected": 0.117
+    },
+    {
+     "price": 3.55,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.9,
+     "acceptance": 0,
+     "notRejected": 0.1
+    },
+    {
+     "price": 3.6,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.937,
+     "acceptance": 0,
+     "notRejected": 0.063
+    },
+    {
+     "price": 3.65,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.963,
+     "acceptance": 0,
+     "notRejected": 0.037
+    },
+    {
+     "price": 3.7,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.977,
+     "acceptance": 0,
+     "notRejected": 0.023
+    },
+    {
+     "price": 3.75,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.98,
+     "acceptance": 0,
+     "notRejected": 0.02
+    },
+    {
+     "price": 3.8,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.983,
+     "acceptance": 0,
+     "notRejected": 0.017
+    },
+    {
+     "price": 3.85,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.993,
+     "acceptance": 0,
+     "notRejected": 0.007
+    },
+    {
+     "price": 3.9,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.993,
+     "acceptance": 0,
+     "notRejected": 0.007
+    },
+    {
+     "price": 3.95,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.993,
+     "acceptance": 0,
+     "notRejected": 0.007
+    },
+    {
+     "price": 4,
+     "tooCheap": 0,
+     "cheap": 0,
+     "expensive": 1,
+     "tooExpensive": 0.997,
+     "acceptance": 0,
+     "notRejected": 0.003
+    }
+   ],
+   "opp": 1.55,
+   "ipp": 1.74,
+   "pmc": 1.38,
+   "pme": 1.97
+  },
+  "bySegment": {
+   "Urban Wellness Professionals": {
+    "n": 74,
+    "curve": [
+     {
+      "price": 0.8,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.85,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.9,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.95,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.05,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.1,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.15,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.2,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.25,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.3,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.35,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.4,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.45,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.5,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.55,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.6,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.65,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.7,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.75,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.8,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.85,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.9,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.95,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 2,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 2.05,
+      "acceptance": 0.986,
+      "notRejected": 1
+     },
+     {
+      "price": 2.1,
+      "acceptance": 0.986,
+      "notRejected": 1
+     },
+     {
+      "price": 2.15,
+      "acceptance": 0.986,
+      "notRejected": 1
+     },
+     {
+      "price": 2.2,
+      "acceptance": 0.986,
+      "notRejected": 1
+     },
+     {
+      "price": 2.25,
+      "acceptance": 0.973,
+      "notRejected": 1
+     },
+     {
+      "price": 2.3,
+      "acceptance": 0.973,
+      "notRejected": 1
+     },
+     {
+      "price": 2.35,
+      "acceptance": 0.959,
+      "notRejected": 1
+     },
+     {
+      "price": 2.4,
+      "acceptance": 0.946,
+      "notRejected": 1
+     },
+     {
+      "price": 2.45,
+      "acceptance": 0.905,
+      "notRejected": 1
+     },
+     {
+      "price": 2.5,
+      "acceptance": 0.892,
+      "notRejected": 1
+     },
+     {
+      "price": 2.55,
+      "acceptance": 0.838,
+      "notRejected": 1
+     },
+     {
+      "price": 2.6,
+      "acceptance": 0.757,
+      "notRejected": 1
+     },
+     {
+      "price": 2.65,
+      "acceptance": 0.662,
+      "notRejected": 1
+     },
+     {
+      "price": 2.7,
+      "acceptance": 0.622,
+      "notRejected": 1
+     },
+     {
+      "price": 2.75,
+      "acceptance": 0.554,
+      "notRejected": 1
+     },
+     {
+      "price": 2.8,
+      "acceptance": 0.432,
+      "notRejected": 1
+     },
+     {
+      "price": 2.85,
+      "acceptance": 0.351,
+      "notRejected": 1
+     },
+     {
+      "price": 2.9,
+      "acceptance": 0.257,
+      "notRejected": 1
+     },
+     {
+      "price": 2.95,
+      "acceptance": 0.162,
+      "notRejected": 1
+     },
+     {
+      "price": 3,
+      "acceptance": 0.122,
+      "notRejected": 1
+     },
+     {
+      "price": 3.05,
+      "acceptance": 0.054,
+      "notRejected": 0.973
+     },
+     {
+      "price": 3.1,
+      "acceptance": 0,
+      "notRejected": 0.959
+     },
+     {
+      "price": 3.15,
+      "acceptance": 0,
+      "notRejected": 0.905
+     },
+     {
+      "price": 3.2,
+      "acceptance": 0,
+      "notRejected": 0.878
+     },
+     {
+      "price": 3.25,
+      "acceptance": 0,
+      "notRejected": 0.824
+     },
+     {
+      "price": 3.3,
+      "acceptance": 0,
+      "notRejected": 0.811
+     },
+     {
+      "price": 3.35,
+      "acceptance": 0,
+      "notRejected": 0.757
+     },
+     {
+      "price": 3.4,
+      "acceptance": 0,
+      "notRejected": 0.649
+     },
+     {
+      "price": 3.45,
+      "acceptance": 0,
+      "notRejected": 0.581
+     },
+     {
+      "price": 3.5,
+      "acceptance": 0,
+      "notRejected": 0.446
+     },
+     {
+      "price": 3.55,
+      "acceptance": 0,
+      "notRejected": 0.378
+     },
+     {
+      "price": 3.6,
+      "acceptance": 0,
+      "notRejected": 0.243
+     },
+     {
+      "price": 3.65,
+      "acceptance": 0,
+      "notRejected": 0.149
+     },
+     {
+      "price": 3.7,
+      "acceptance": 0,
+      "notRejected": 0.095
+     },
+     {
+      "price": 3.75,
+      "acceptance": 0,
+      "notRejected": 0.081
+     },
+     {
+      "price": 3.8,
+      "acceptance": 0,
+      "notRejected": 0.068
+     },
+     {
+      "price": 3.85,
+      "acceptance": 0,
+      "notRejected": 0.027
+     },
+     {
+      "price": 3.9,
+      "acceptance": 0,
+      "notRejected": 0.027
+     },
+     {
+      "price": 3.95,
+      "acceptance": 0,
+      "notRejected": 0.027
+     },
+     {
+      "price": 4,
+      "acceptance": 0,
+      "notRejected": 0.014
+     }
+    ],
+    "opp": 1.55,
+    "ipp": 2.07,
+    "pmc": 1.55,
+    "pme": 2.1
+   },
+   "Fitness & Gym-Goers": {
+    "n": 63,
+    "curve": [
+     {
+      "price": 0.8,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.85,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.9,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.95,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.05,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.1,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.15,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.2,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.25,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.3,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.35,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.4,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.45,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.5,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.55,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.6,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.65,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.7,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.75,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.8,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.85,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.9,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.95,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 2,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 2.05,
+      "acceptance": 0.984,
+      "notRejected": 1
+     },
+     {
+      "price": 2.1,
+      "acceptance": 0.952,
+      "notRejected": 1
+     },
+     {
+      "price": 2.15,
+      "acceptance": 0.921,
+      "notRejected": 1
+     },
+     {
+      "price": 2.2,
+      "acceptance": 0.889,
+      "notRejected": 1
+     },
+     {
+      "price": 2.25,
+      "acceptance": 0.857,
+      "notRejected": 1
+     },
+     {
+      "price": 2.3,
+      "acceptance": 0.81,
+      "notRejected": 1
+     },
+     {
+      "price": 2.35,
+      "acceptance": 0.778,
+      "notRejected": 1
+     },
+     {
+      "price": 2.4,
+      "acceptance": 0.698,
+      "notRejected": 1
+     },
+     {
+      "price": 2.45,
+      "acceptance": 0.587,
+      "notRejected": 1
+     },
+     {
+      "price": 2.5,
+      "acceptance": 0.524,
+      "notRejected": 1
+     },
+     {
+      "price": 2.55,
+      "acceptance": 0.397,
+      "notRejected": 1
+     },
+     {
+      "price": 2.6,
+      "acceptance": 0.302,
+      "notRejected": 1
+     },
+     {
+      "price": 2.65,
+      "acceptance": 0.238,
+      "notRejected": 1
+     },
+     {
+      "price": 2.7,
+      "acceptance": 0.175,
+      "notRejected": 0.984
+     },
+     {
+      "price": 2.75,
+      "acceptance": 0.127,
+      "notRejected": 0.968
+     },
+     {
+      "price": 2.8,
+      "acceptance": 0.079,
+      "notRejected": 0.952
+     },
+     {
+      "price": 2.85,
+      "acceptance": 0.016,
+      "notRejected": 0.905
+     },
+     {
+      "price": 2.9,
+      "acceptance": 0,
+      "notRejected": 0.81
+     },
+     {
+      "price": 2.95,
+      "acceptance": 0,
+      "notRejected": 0.73
+     },
+     {
+      "price": 3,
+      "acceptance": 0,
+      "notRejected": 0.635
+     },
+     {
+      "price": 3.05,
+      "acceptance": 0,
+      "notRejected": 0.556
+     },
+     {
+      "price": 3.1,
+      "acceptance": 0,
+      "notRejected": 0.46
+     },
+     {
+      "price": 3.15,
+      "acceptance": 0,
+      "notRejected": 0.365
+     },
+     {
+      "price": 3.2,
+      "acceptance": 0,
+      "notRejected": 0.333
+     },
+     {
+      "price": 3.25,
+      "acceptance": 0,
+      "notRejected": 0.206
+     },
+     {
+      "price": 3.3,
+      "acceptance": 0,
+      "notRejected": 0.175
+     },
+     {
+      "price": 3.35,
+      "acceptance": 0,
+      "notRejected": 0.175
+     },
+     {
+      "price": 3.4,
+      "acceptance": 0,
+      "notRejected": 0.095
+     },
+     {
+      "price": 3.45,
+      "acceptance": 0,
+      "notRejected": 0.048
+     },
+     {
+      "price": 3.5,
+      "acceptance": 0,
+      "notRejected": 0.032
+     },
+     {
+      "price": 3.55,
+      "acceptance": 0,
+      "notRejected": 0.032
+     },
+     {
+      "price": 3.6,
+      "acceptance": 0,
+      "notRejected": 0.016
+     },
+     {
+      "price": 3.65,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.7,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.75,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.8,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.85,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.9,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.95,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 4,
+      "acceptance": 0,
+      "notRejected": 0
+     }
+    ],
+    "opp": 1.3,
+    "ipp": 2.05,
+    "pmc": 1.3,
+    "pme": 2.15
+   },
+   "On-the-go Commuters": {
+    "n": 64,
+    "curve": [
+     {
+      "price": 0.8,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.85,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.9,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.95,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.05,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.1,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.15,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.2,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.25,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.3,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.35,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.4,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.45,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.5,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.55,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.6,
+      "acceptance": 0.984,
+      "notRejected": 1
+     },
+     {
+      "price": 1.65,
+      "acceptance": 0.984,
+      "notRejected": 1
+     },
+     {
+      "price": 1.7,
+      "acceptance": 0.969,
+      "notRejected": 1
+     },
+     {
+      "price": 1.75,
+      "acceptance": 0.922,
+      "notRejected": 1
+     },
+     {
+      "price": 1.8,
+      "acceptance": 0.875,
+      "notRejected": 1
+     },
+     {
+      "price": 1.85,
+      "acceptance": 0.844,
+      "notRejected": 1
+     },
+     {
+      "price": 1.9,
+      "acceptance": 0.813,
+      "notRejected": 1
+     },
+     {
+      "price": 1.95,
+      "acceptance": 0.688,
+      "notRejected": 1
+     },
+     {
+      "price": 2,
+      "acceptance": 0.594,
+      "notRejected": 1
+     },
+     {
+      "price": 2.05,
+      "acceptance": 0.547,
+      "notRejected": 1
+     },
+     {
+      "price": 2.1,
+      "acceptance": 0.453,
+      "notRejected": 1
+     },
+     {
+      "price": 2.15,
+      "acceptance": 0.375,
+      "notRejected": 1
+     },
+     {
+      "price": 2.2,
+      "acceptance": 0.344,
+      "notRejected": 1
+     },
+     {
+      "price": 2.25,
+      "acceptance": 0.203,
+      "notRejected": 0.984
+     },
+     {
+      "price": 2.3,
+      "acceptance": 0.141,
+      "notRejected": 0.984
+     },
+     {
+      "price": 2.35,
+      "acceptance": 0.125,
+      "notRejected": 0.953
+     },
+     {
+      "price": 2.4,
+      "acceptance": 0.047,
+      "notRejected": 0.938
+     },
+     {
+      "price": 2.45,
+      "acceptance": 0.016,
+      "notRejected": 0.891
+     },
+     {
+      "price": 2.5,
+      "acceptance": 0.016,
+      "notRejected": 0.859
+     },
+     {
+      "price": 2.55,
+      "acceptance": 0.016,
+      "notRejected": 0.734
+     },
+     {
+      "price": 2.6,
+      "acceptance": 0,
+      "notRejected": 0.719
+     },
+     {
+      "price": 2.65,
+      "acceptance": 0,
+      "notRejected": 0.609
+     },
+     {
+      "price": 2.7,
+      "acceptance": 0,
+      "notRejected": 0.531
+     },
+     {
+      "price": 2.75,
+      "acceptance": 0,
+      "notRejected": 0.406
+     },
+     {
+      "price": 2.8,
+      "acceptance": 0,
+      "notRejected": 0.313
+     },
+     {
+      "price": 2.85,
+      "acceptance": 0,
+      "notRejected": 0.156
+     },
+     {
+      "price": 2.9,
+      "acceptance": 0,
+      "notRejected": 0.094
+     },
+     {
+      "price": 2.95,
+      "acceptance": 0,
+      "notRejected": 0.047
+     },
+     {
+      "price": 3,
+      "acceptance": 0,
+      "notRejected": 0.031
+     },
+     {
+      "price": 3.05,
+      "acceptance": 0,
+      "notRejected": 0.031
+     },
+     {
+      "price": 3.1,
+      "acceptance": 0,
+      "notRejected": 0.031
+     },
+     {
+      "price": 3.15,
+      "acceptance": 0,
+      "notRejected": 0.031
+     },
+     {
+      "price": 3.2,
+      "acceptance": 0,
+      "notRejected": 0.031
+     },
+     {
+      "price": 3.25,
+      "acceptance": 0,
+      "notRejected": 0.016
+     },
+     {
+      "price": 3.3,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.35,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.4,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.45,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.5,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.55,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.6,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.65,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.7,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.75,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.8,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.85,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.9,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.95,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 4,
+      "acceptance": 0,
+      "notRejected": 0
+     }
+    ],
+    "opp": 1.25,
+    "ipp": 1.7,
+    "pmc": 1.25,
+    "pme": 1.8
+   },
+   "Students & Budget-Conscious": {
+    "n": 99,
+    "curve": [
+     {
+      "price": 0.8,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.85,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.9,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 0.95,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.05,
+      "acceptance": 1,
+      "notRejected": 1
+     },
+     {
+      "price": 1.1,
+      "acceptance": 0.99,
+      "notRejected": 1
+     },
+     {
+      "price": 1.15,
+      "acceptance": 0.99,
+      "notRejected": 1
+     },
+     {
+      "price": 1.2,
+      "acceptance": 0.99,
+      "notRejected": 1
+     },
+     {
+      "price": 1.25,
+      "acceptance": 0.98,
+      "notRejected": 1
+     },
+     {
+      "price": 1.3,
+      "acceptance": 0.98,
+      "notRejected": 1
+     },
+     {
+      "price": 1.35,
+      "acceptance": 0.939,
+      "notRejected": 1
+     },
+     {
+      "price": 1.4,
+      "acceptance": 0.899,
+      "notRejected": 1
+     },
+     {
+      "price": 1.45,
+      "acceptance": 0.869,
+      "notRejected": 1
+     },
+     {
+      "price": 1.5,
+      "acceptance": 0.798,
+      "notRejected": 1
+     },
+     {
+      "price": 1.55,
+      "acceptance": 0.768,
+      "notRejected": 1
+     },
+     {
+      "price": 1.6,
+      "acceptance": 0.697,
+      "notRejected": 1
+     },
+     {
+      "price": 1.65,
+      "acceptance": 0.657,
+      "notRejected": 1
+     },
+     {
+      "price": 1.7,
+      "acceptance": 0.505,
+      "notRejected": 1
+     },
+     {
+      "price": 1.75,
+      "acceptance": 0.414,
+      "notRejected": 1
+     },
+     {
+      "price": 1.8,
+      "acceptance": 0.354,
+      "notRejected": 0.98
+     },
+     {
+      "price": 1.85,
+      "acceptance": 0.242,
+      "notRejected": 0.97
+     },
+     {
+      "price": 1.9,
+      "acceptance": 0.202,
+      "notRejected": 0.949
+     },
+     {
+      "price": 1.95,
+      "acceptance": 0.141,
+      "notRejected": 0.919
+     },
+     {
+      "price": 2,
+      "acceptance": 0.101,
+      "notRejected": 0.869
+     },
+     {
+      "price": 2.05,
+      "acceptance": 0.061,
+      "notRejected": 0.798
+     },
+     {
+      "price": 2.1,
+      "acceptance": 0.04,
+      "notRejected": 0.717
+     },
+     {
+      "price": 2.15,
+      "acceptance": 0.03,
+      "notRejected": 0.636
+     },
+     {
+      "price": 2.2,
+      "acceptance": 0.02,
+      "notRejected": 0.505
+     },
+     {
+      "price": 2.25,
+      "acceptance": 0.01,
+      "notRejected": 0.394
+     },
+     {
+      "price": 2.3,
+      "acceptance": 0,
+      "notRejected": 0.283
+     },
+     {
+      "price": 2.35,
+      "acceptance": 0,
+      "notRejected": 0.162
+     },
+     {
+      "price": 2.4,
+      "acceptance": 0,
+      "notRejected": 0.091
+     },
+     {
+      "price": 2.45,
+      "acceptance": 0,
+      "notRejected": 0.04
+     },
+     {
+      "price": 2.5,
+      "acceptance": 0,
+      "notRejected": 0.04
+     },
+     {
+      "price": 2.55,
+      "acceptance": 0,
+      "notRejected": 0.04
+     },
+     {
+      "price": 2.6,
+      "acceptance": 0,
+      "notRejected": 0.03
+     },
+     {
+      "price": 2.65,
+      "acceptance": 0,
+      "notRejected": 0.02
+     },
+     {
+      "price": 2.7,
+      "acceptance": 0,
+      "notRejected": 0.01
+     },
+     {
+      "price": 2.75,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 2.8,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 2.85,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 2.9,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 2.95,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.05,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.1,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.15,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.2,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.25,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.3,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.35,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.4,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.45,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.5,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.55,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.6,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.65,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.7,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.75,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.8,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.85,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.9,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 3.95,
+      "acceptance": 0,
+      "notRejected": 0
+     },
+     {
+      "price": 4,
+      "acceptance": 0,
+      "notRejected": 0
+     }
+    ],
+    "opp": 0.95,
+    "ipp": 1.33,
+    "pmc": 0.95,
+    "pme": 1.45
+   }
+  }
+ },
+ "sales": {
+  "byCountryChannel": [
+   {
+    "country": "Netherlands",
+    "channel": "DTC Online",
+    "units": 152191,
+    "revenue": 205424.01,
+    "asp": 1.35,
+    "weeks": 78,
+    "avgWeeklyUnits": 1951
+   },
+   {
+    "country": "Netherlands",
+    "channel": "Retail/Grocery",
+    "units": 282231,
+    "revenue": 381023.75,
+    "asp": 1.35,
+    "weeks": 78,
+    "avgWeeklyUnits": 3618
+   },
+   {
+    "country": "Netherlands",
+    "channel": "Gym & Office",
+    "units": 76214,
+    "revenue": 102766.84,
+    "asp": 1.35,
+    "weeks": 78,
+    "avgWeeklyUnits": 977
+   },
+   {
+    "country": "Denmark",
+    "channel": "DTC Online",
+    "units": 107087,
+    "revenue": 144519.02,
+    "asp": 1.35,
+    "weeks": 78,
+    "avgWeeklyUnits": 1373
+   },
+   {
+    "country": "Denmark",
+    "channel": "Retail/Grocery",
+    "units": 137673,
+    "revenue": 185314.45,
+    "asp": 1.35,
+    "weeks": 78,
+    "avgWeeklyUnits": 1765
+   },
+   {
+    "country": "Denmark",
+    "channel": "Gym & Office",
+    "units": 61215,
+    "revenue": 82719.92,
+    "asp": 1.35,
+    "weeks": 78,
+    "avgWeeklyUnits": 785
+   },
+   {
+    "country": "Sweden",
+    "channel": "DTC Online",
+    "units": 123103,
+    "revenue": 166371.31,
+    "asp": 1.35,
+    "weeks": 78,
+    "avgWeeklyUnits": 1578
+   },
+   {
+    "country": "Sweden",
+    "channel": "Retail/Grocery",
+    "units": 182844,
+    "revenue": 247379.54,
+    "asp": 1.35,
+    "weeks": 78,
+    "avgWeeklyUnits": 2344
+   },
+   {
+    "country": "Sweden",
+    "channel": "Gym & Office",
+    "units": 77285,
+    "revenue": 104406.97,
+    "asp": 1.35,
+    "weeks": 78,
+    "avgWeeklyUnits": 991
+   }
+  ],
+  "promoEffect": [
+   {
+    "channel": "DTC Online",
+    "promoWeeks": 13,
+    "avgUnitsPromo": 1549,
+    "avgUnitsNoPromo": 1639,
+    "uplift": -0.055
+   },
+   {
+    "channel": "Retail/Grocery",
+    "promoWeeks": 21,
+    "avgUnitsPromo": 2778,
+    "avgUnitsNoPromo": 2556,
+    "uplift": 0.087
+   },
+   {
+    "channel": "Gym & Office",
+    "promoWeeks": 13,
+    "avgUnitsPromo": 972,
+    "avgUnitsNoPromo": 914,
+    "uplift": 0.063
+   }
+  ]
+ },
+ "marketing": {
+  "channels": [
+   {
+    "channel": "Paid Social",
+    "months": 18,
+    "reach": 880877,
+    "conversions": 952,
+    "spend": 43588.69,
+    "cac": 45.79,
+    "ltv": 132.13,
+    "ltvToCac": 2.89
+   },
+   {
+    "channel": "Influencer / Content",
+    "months": 18,
+    "reach": 636397,
+    "conversions": 2258,
+    "spend": 84732.86,
+    "cac": 37.53,
+    "ltv": 100.82,
+    "ltvToCac": 2.69
+   },
+   {
+    "channel": "Retail Sampling",
+    "months": 18,
+    "reach": 561380,
+    "conversions": 12080,
+    "spend": 726327.24,
+    "cac": 60.13,
+    "ltv": 174.17,
+    "ltvToCac": 2.9
+   },
+   {
+    "channel": "Referral / Subscription",
+    "months": 18,
+    "reach": 661294,
+    "conversions": 11452,
+    "spend": 322241.25,
+    "cac": 28.14,
+    "ltv": 81.39,
+    "ltvToCac": 2.89
+   }
+  ],
+  "blendedCac": 44.01
+ },
+ "competitors": {
+  "prices": [
+   {
+    "competitor": "PulsUp",
+    "positioning": "Mass market",
+    "channel": "DTC Online",
+    "format": "Single can (330ml)",
+    "price": 1.15,
+    "marketingIndex": 100
+   },
+   {
+    "competitor": "PulsUp",
+    "positioning": "Mass market",
+    "channel": "DTC Online",
+    "format": "4-pack",
+    "price": 1.07,
+    "marketingIndex": 100
+   },
+   {
+    "competitor": "PulsUp",
+    "positioning": "Mass market",
+    "channel": "DTC Online",
+    "format": "12-pack subscription",
+    "price": 0.98,
+    "marketingIndex": 100
+   },
+   {
+    "competitor": "PulsUp",
+    "positioning": "Mass market",
+    "channel": "Retail/Grocery",
+    "format": "Single can (330ml)",
+    "price": 1.07,
+    "marketingIndex": 100
+   },
+   {
+    "competitor": "PulsUp",
+    "positioning": "Mass market",
+    "channel": "Retail/Grocery",
+    "format": "4-pack",
+    "price": 1.06,
+    "marketingIndex": 100
+   },
+   {
+    "competitor": "PulsUp",
+    "positioning": "Mass market",
+    "channel": "Retail/Grocery",
+    "format": "12-pack subscription",
+    "price": 0.96,
+    "marketingIndex": 100
+   },
+   {
+    "competitor": "PulsUp",
+    "positioning": "Mass market",
+    "channel": "Gym & Office",
+    "format": "Single can (330ml)",
+    "price": 1.28,
+    "marketingIndex": 100
+   },
+   {
+    "competitor": "PulsUp",
+    "positioning": "Mass market",
+    "channel": "Gym & Office",
+    "format": "4-pack",
+    "price": 1.18,
+    "marketingIndex": 100
+   },
+   {
+    "competitor": "Mate Libre",
+    "positioning": "Heritage / loyal niche",
+    "channel": "Retail/Grocery",
+    "format": "Single can (330ml)",
+    "price": 1.59,
+    "marketingIndex": 40
+   },
+   {
+    "competitor": "Mate Libre",
+    "positioning": "Heritage / loyal niche",
+    "channel": "Retail/Grocery",
+    "format": "4-pack",
+    "price": 1.5,
+    "marketingIndex": 40
+   },
+   {
+    "competitor": "Mate Libre",
+    "positioning": "Heritage / loyal niche",
+    "channel": "Retail/Grocery",
+    "format": "12-pack subscription",
+    "price": 1.37,
+    "marketingIndex": 40
+   },
+   {
+    "competitor": "Mate Libre",
+    "positioning": "Heritage / loyal niche",
+    "channel": "Gym & Office",
+    "format": "Single can (330ml)",
+    "price": 1.83,
+    "marketingIndex": 40
+   },
+   {
+    "competitor": "Mate Libre",
+    "positioning": "Heritage / loyal niche",
+    "channel": "Gym & Office",
+    "format": "4-pack",
+    "price": 1.73,
+    "marketingIndex": 40
+   },
+   {
+    "competitor": "VoltFit",
+    "positioning": "Premium performance",
+    "channel": "DTC Online",
+    "format": "Single can (330ml)",
+    "price": 2.49,
+    "marketingIndex": 85
+   },
+   {
+    "competitor": "VoltFit",
+    "positioning": "Premium performance",
+    "channel": "DTC Online",
+    "format": "4-pack",
+    "price": 2.42,
+    "marketingIndex": 85
+   },
+   {
+    "competitor": "VoltFit",
+    "positioning": "Premium performance",
+    "channel": "DTC Online",
+    "format": "12-pack subscription",
+    "price": 2.19,
+    "marketingIndex": 85
+   },
+   {
+    "competitor": "VoltFit",
+    "positioning": "Premium performance",
+    "channel": "Retail/Grocery",
+    "format": "Single can (330ml)",
+    "price": 2.37,
+    "marketingIndex": 85
+   },
+   {
+    "competitor": "VoltFit",
+    "positioning": "Premium performance",
+    "channel": "Retail/Grocery",
+    "format": "4-pack",
+    "price": 2.3,
+    "marketingIndex": 85
+   },
+   {
+    "competitor": "VoltFit",
+    "positioning": "Premium performance",
+    "channel": "Retail/Grocery",
+    "format": "12-pack subscription",
+    "price": 2.1,
+    "marketingIndex": 85
+   },
+   {
+    "competitor": "VoltFit",
+    "positioning": "Premium performance",
+    "channel": "Gym & Office",
+    "format": "Single can (330ml)",
+    "price": 2.72,
+    "marketingIndex": 85
+   },
+   {
+    "competitor": "VoltFit",
+    "positioning": "Premium performance",
+    "channel": "Gym & Office",
+    "format": "4-pack",
+    "price": 2.66,
+    "marketingIndex": 85
+   },
+   {
+    "competitor": "Root & Rise",
+    "positioning": "Boutique adaptogenic",
+    "channel": "DTC Online",
+    "format": "Single can (330ml)",
+    "price": 3.11,
+    "marketingIndex": 15
+   },
+   {
+    "competitor": "Root & Rise",
+    "positioning": "Boutique adaptogenic",
+    "channel": "DTC Online",
+    "format": "4-pack",
+    "price": 2.96,
+    "marketingIndex": 15
+   },
+   {
+    "competitor": "Root & Rise",
+    "positioning": "Boutique adaptogenic",
+    "channel": "DTC Online",
+    "format": "12-pack subscription",
+    "price": 2.67,
+    "marketingIndex": 15
+   },
+   {
+    "competitor": "Root & Rise",
+    "positioning": "Boutique adaptogenic",
+    "channel": "Retail/Grocery",
+    "format": "Single can (330ml)",
+    "price": 2.98,
+    "marketingIndex": 15
+   },
+   {
+    "competitor": "Root & Rise",
+    "positioning": "Boutique adaptogenic",
+    "channel": "Retail/Grocery",
+    "format": "4-pack",
+    "price": 2.82,
+    "marketingIndex": 15
+   },
+   {
+    "competitor": "Root & Rise",
+    "positioning": "Boutique adaptogenic",
+    "channel": "Retail/Grocery",
+    "format": "12-pack subscription",
+    "price": 2.54,
+    "marketingIndex": 15
+   }
+  ],
+  "history": [
+   {
+    "competitor": "PulsUp",
+    "month": "2025-09",
+    "listPrice": 1.1,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.1
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2025-10",
+    "listPrice": 1.09,
+    "promo": true,
+    "discountPct": 10,
+    "shelfPrice": 0.98
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2025-11",
+    "listPrice": 1.1,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.1
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2025-12",
+    "listPrice": 1.09,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.09
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2026-01",
+    "listPrice": 1.11,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.11
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2026-02",
+    "listPrice": 1.09,
+    "promo": true,
+    "discountPct": 20,
+    "shelfPrice": 0.87
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2026-03",
+    "listPrice": 1.08,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.08
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2026-04",
+    "listPrice": 1.1,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.1
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2026-05",
+    "listPrice": 1.11,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.11
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2026-06",
+    "listPrice": 1.08,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.08
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2026-07",
+    "listPrice": 1.08,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.08
+   },
+   {
+    "competitor": "PulsUp",
+    "month": "2026-08",
+    "listPrice": 1.07,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.07
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2025-09",
+    "listPrice": 1.58,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.58
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2025-10",
+    "listPrice": 1.58,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.58
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2025-11",
+    "listPrice": 1.57,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.57
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2025-12",
+    "listPrice": 1.58,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.58
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2026-01",
+    "listPrice": 1.57,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.57
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2026-02",
+    "listPrice": 1.58,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.58
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2026-03",
+    "listPrice": 1.6,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.6
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2026-04",
+    "listPrice": 1.58,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.58
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2026-05",
+    "listPrice": 1.58,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.58
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2026-06",
+    "listPrice": 1.58,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.58
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2026-07",
+    "listPrice": 1.58,
+    "promo": true,
+    "discountPct": 20,
+    "shelfPrice": 1.26
+   },
+   {
+    "competitor": "Mate Libre",
+    "month": "2026-08",
+    "listPrice": 1.6,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 1.6
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2025-09",
+    "listPrice": 2.4,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.4
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2025-10",
+    "listPrice": 2.39,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.39
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2025-11",
+    "listPrice": 2.38,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.38
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2025-12",
+    "listPrice": 2.39,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.39
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2026-01",
+    "listPrice": 2.38,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.38
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2026-02",
+    "listPrice": 2.41,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.41
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2026-03",
+    "listPrice": 2.4,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.4
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2026-04",
+    "listPrice": 2.38,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.38
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2026-05",
+    "listPrice": 2.38,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.38
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2026-06",
+    "listPrice": 2.4,
+    "promo": true,
+    "discountPct": 10,
+    "shelfPrice": 2.16
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2026-07",
+    "listPrice": 2.38,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.38
+   },
+   {
+    "competitor": "VoltFit",
+    "month": "2026-08",
+    "listPrice": 2.37,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.37
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2025-09",
+    "listPrice": 2.95,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.95
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2025-10",
+    "listPrice": 2.93,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.93
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2025-11",
+    "listPrice": 2.97,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.97
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2025-12",
+    "listPrice": 2.95,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.95
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2026-01",
+    "listPrice": 2.96,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.96
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2026-02",
+    "listPrice": 2.94,
+    "promo": true,
+    "discountPct": 15,
+    "shelfPrice": 2.5
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2026-03",
+    "listPrice": 2.95,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.95
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2026-04",
+    "listPrice": 2.97,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.97
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2026-05",
+    "listPrice": 2.95,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.95
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2026-06",
+    "listPrice": 2.94,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.94
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2026-07",
+    "listPrice": 2.94,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.94
+   },
+   {
+    "competitor": "Root & Rise",
+    "month": "2026-08",
+    "listPrice": 2.95,
+    "promo": false,
+    "discountPct": 0,
+    "shelfPrice": 2.95
+   }
+  ]
+ },
+ "costs": {
+  "cogs": [
+   {
+    "component": "Ingredients (green tea caffeine + adaptogens)",
+    "eur": 0.21,
+    "pct": 33.9
+   },
+   {
+    "component": "Can & packaging",
+    "eur": 0.14,
+    "pct": 22.6
+   },
+   {
+    "component": "Co-packing / production",
+    "eur": 0.15,
+    "pct": 24.2
+   },
+   {
+    "component": "Freight & logistics",
+    "eur": 0.07,
+    "pct": 11.3
+   },
+   {
+    "component": "Germany import duty & compliance allowance",
+    "eur": 0.05,
+    "pct": 8.1
+   }
+  ],
+  "cogsTotal": 0.62,
+  "homeGrossMarginPct": 30
+ },
+ "channelEconomics": [
+  {
+   "channel": "DTC Online",
+   "retailerMarginPct": 0,
+   "distributorCutPct": 0,
+   "paymentProcessingPct": 0.029,
+   "fulfillmentCostEur": 0.35
+  },
+  {
+   "channel": "Retail/Grocery",
+   "retailerMarginPct": 0.35,
+   "distributorCutPct": 0.08,
+   "paymentProcessingPct": 0,
+   "fulfillmentCostEur": 0
+  },
+  {
+   "channel": "Gym & Office",
+   "retailerMarginPct": 0.2,
+   "distributorCutPct": 0,
+   "paymentProcessingPct": 0,
+   "fulfillmentCostEur": 0
+  }
+ ],
+ "priceTests": [
+  {
+   "price": 1.79,
+   "channel": "DTC Online",
+   "acceptancePct": 61.7,
+   "netPrice": 1.39,
+   "contribution": 0.77,
+   "contributionMarginPct": 55.3
+  },
+  {
+   "price": 1.79,
+   "channel": "Retail/Grocery",
+   "acceptancePct": 61.7,
+   "netPrice": 1.02,
+   "contribution": 0.4,
+   "contributionMarginPct": 39.2
+  },
+  {
+   "price": 1.79,
+   "channel": "Gym & Office",
+   "acceptancePct": 61.7,
+   "netPrice": 1.43,
+   "contribution": 0.81,
+   "contributionMarginPct": 56.7
+  },
+  {
+   "price": 2.19,
+   "channel": "DTC Online",
+   "acceptancePct": 51.7,
+   "netPrice": 1.78,
+   "contribution": 1.16,
+   "contributionMarginPct": 65.1
+  },
+  {
+   "price": 2.19,
+   "channel": "Retail/Grocery",
+   "acceptancePct": 51.7,
+   "netPrice": 1.25,
+   "contribution": 0.63,
+   "contributionMarginPct": 50.3
+  },
+  {
+   "price": 2.19,
+   "channel": "Gym & Office",
+   "acceptancePct": 51.7,
+   "netPrice": 1.75,
+   "contribution": 1.13,
+   "contributionMarginPct": 64.6
+  },
+  {
+   "price": 2.59,
+   "channel": "DTC Online",
+   "acceptancePct": 26.7,
+   "netPrice": 2.16,
+   "contribution": 1.54,
+   "contributionMarginPct": 71.4
+  },
+  {
+   "price": 2.59,
+   "channel": "Retail/Grocery",
+   "acceptancePct": 26.7,
+   "netPrice": 1.48,
+   "contribution": 0.86,
+   "contributionMarginPct": 58
+  },
+  {
+   "price": 2.59,
+   "channel": "Gym & Office",
+   "acceptancePct": 26.7,
+   "netPrice": 2.07,
+   "contribution": 1.45,
+   "contributionMarginPct": 70.1
+  }
+ ],
+ "seasonality": [
+  {
+   "month": 1,
+   "index": 78,
+   "tempC": 2,
+   "homeMarketIndex": 73
+  },
+  {
+   "month": 2,
+   "index": 80,
+   "tempC": 3,
+   "homeMarketIndex": 76
+  },
+  {
+   "month": 3,
+   "index": 88,
+   "tempC": 7,
+   "homeMarketIndex": 85
+  },
+  {
+   "month": 4,
+   "index": 98,
+   "tempC": 11,
+   "homeMarketIndex": 98
+  },
+  {
+   "month": 5,
+   "index": 118,
+   "tempC": 15,
+   "homeMarketIndex": 120
+  },
+  {
+   "month": 6,
+   "index": 132,
+   "tempC": 18,
+   "homeMarketIndex": 136
+  },
+  {
+   "month": 7,
+   "index": 138,
+   "tempC": 19,
+   "homeMarketIndex": 134
+  },
+  {
+   "month": 8,
+   "index": 128,
+   "tempC": 19,
+   "homeMarketIndex": 119
+  },
+  {
+   "month": 9,
+   "index": 104,
+   "tempC": 15,
+   "homeMarketIndex": 100
+  },
+  {
+   "month": 10,
+   "index": 90,
+   "tempC": 11,
+   "homeMarketIndex": 90
+  },
+  {
+   "month": 11,
+   "index": 82,
+   "tempC": 6,
+   "homeMarketIndex": 83
+  },
+  {
+   "month": 12,
+   "index": 84,
+   "tempC": 3,
+   "homeMarketIndex": 86
+  }
+ ],
+ "market": {
+  "subcategories": [
+   {
+    "name": "Energy / focus",
+    "byYear": {
+     "2022": 1944,
+     "2023": 2080,
+     "2024": 2226,
+     "2025": 2381,
+     "2026": 2548,
+     "2027": 2726
+    }
+   },
+   {
+    "name": "Hydration",
+    "byYear": {
+     "2022": 2152,
+     "2023": 2303,
+     "2024": 2464,
+     "2025": 2636,
+     "2026": 2821,
+     "2027": 3018
+    }
+   },
+   {
+    "name": "Plant-based / adaptogenic",
+    "byYear": {
+     "2022": 1666,
+     "2023": 1783,
+     "2024": 1908,
+     "2025": 2041,
+     "2026": 2184,
+     "2027": 2337
+    }
+   },
+   {
+    "name": "Other functional",
+    "byYear": {
+     "2022": 1180,
+     "2023": 1263,
+     "2024": 1351,
+     "2025": 1446,
+     "2026": 1547,
+     "2027": 1655
+    }
+   }
+  ],
+  "regions": [
+   {
+    "city": "Berlin",
+    "marketShare": 0.18,
+    "cagr": 0.09
+   },
+   {
+    "city": "Munich",
+    "marketShare": 0.15,
+    "cagr": 0.09
+   },
+   {
+    "city": "Hamburg",
+    "marketShare": 0.1,
+    "cagr": 0.07
+   },
+   {
+    "city": "Cologne",
+    "marketShare": 0.09,
+    "cagr": 0.07
+   },
+   {
+    "city": "Frankfurt",
+    "marketShare": 0.08,
+    "cagr": 0.07
+   },
+   {
+    "city": "Other Germany",
+    "marketShare": 0.4,
+    "cagr": 0.07
+   }
+  ],
+  "totalMarket2026MEur": 9100
+ },
+ "quotes": [
+  {
+   "segment": "Students & Budget-Conscious",
+   "sentiment": "positive",
+   "quote": "If it's on promo near the exam period I'll grab a pack, otherwise it's a stretch."
+  },
+  {
+   "segment": "Students & Budget-Conscious",
+   "sentiment": "negative",
+   "quote": "Honestly 2,50EUR for a can is a hard no on a student budget, whatever is inside it."
+  },
+  {
+   "segment": "Students & Budget-Conscious",
+   "sentiment": "mixed",
+   "quote": "I like the idea but I'd only buy it if my usual energy drink was sold out."
+  },
+  {
+   "segment": "Urban Wellness Professionals",
+   "sentiment": "positive",
+   "quote": "I switched most of my afternoon coffee runs to something like this, I don't mind paying more for clean ingredients."
+  },
+  {
+   "segment": "Urban Wellness Professionals",
+   "sentiment": "positive",
+   "quote": "The adaptogen angle is what gets me, not the caffeine."
+  },
+  {
+   "segment": "Urban Wellness Professionals",
+   "sentiment": "negative",
+   "quote": "Too many wellness brands taste like medicine, that's the real risk here, not the price."
+  },
+  {
+   "segment": "Fitness & Gym-Goers",
+   "sentiment": "positive",
+   "quote": "If it performs like VoltFit but tastes better I'm switching immediately."
+  },
+  {
+   "segment": "Fitness & Gym-Goers",
+   "sentiment": "mixed",
+   "quote": "I care about the caffeine source but I'm not going to overpay just for a nicer can."
+  },
+  {
+   "segment": "Fitness & Gym-Goers",
+   "sentiment": "negative",
+   "quote": "My gym already sells three energy drinks, it needs a real reason to take shelf space."
+  },
+  {
+   "segment": "On-the-go Commuters",
+   "sentiment": "positive",
+   "quote": "Grab and go is everything for me, if it's not at the kiosk near the station I'll never try it."
+  },
+  {
+   "segment": "On-the-go Commuters",
+   "sentiment": "mixed",
+   "quote": "I'd try it once out of curiosity, repeat purchase depends entirely on taste."
+  },
+  {
+   "segment": "On-the-go Commuters",
+   "sentiment": "negative",
+   "quote": "One more canned drink option at the kiosk doesn't move me, I buy on habit."
+  }
+ ]
+}
