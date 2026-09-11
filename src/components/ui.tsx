@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 export function Card({ title, subtitle, children, className = "" }: { title?: string; subtitle?: string; children: ReactNode; className?: string }) {
   return (
-    <section className={`bg-card border border-line rounded-xl p-4 sm:p-5 ${className}`}>
+    <section className={`bg-card rounded-2xl p-4 sm:p-5 shadow-[0_1px_3px_rgba(16,16,16,0.06)] ${className}`}>
       {title && (
         <header className="mb-3">
           <h2 className="text-base font-semibold leading-tight">{title}</h2>
