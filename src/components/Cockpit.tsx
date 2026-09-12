@@ -34,6 +34,8 @@ export default function Cockpit() {
   const [linkCopied, setLinkCopied] = useState(false);
   const [createOpen, setCreateOpen] = useState(false);
   const [viewLoaded, setViewLoaded] = useState("");
+  const [lens, setLens] = useState<"CEO" | "CFO" | "CMO" | "COO">("CEO");
+  const [saved, setSaved] = useState(false);
 
   // Restore the last scenario after hydration (per-browser convenience only, nothing is sent anywhere).
   useEffect(() => {
@@ -73,6 +75,7 @@ export default function Cockpit() {
           <p className="text-xs uppercase tracking-wide text-ink-3">LUMEN · Strategy &amp; Analytics · Germany market entry</p>
           <h1 className="text-2xl sm:text-3xl font-semibold leading-tight">Germany Launch Cockpit</h1>
           <p className="text-sm text-ink-2 mt-1 max-w-2xl">Move the price and the channel mix, and watch what it does to acceptance, margin, and the months it takes to pay back a customer. Built for Freya&apos;s question: where is the real CMO/CFO trade-off?</p>
+          <p className="text-sm font-bold text-ink mt-1">Build your own launch scenario with AI → top right</p>
         </div>
         <div className="flex flex-wrap gap-2 items-center justify-end sm:pt-7" role="group" aria-label="Load an executive scenario">
           <span className="text-[11px] uppercase tracking-wide text-ink-3 mr-1">Load a view</span>
@@ -86,8 +89,14 @@ export default function Cockpit() {
           <button onClick={copyLink} className="text-sm px-3 py-1.5 rounded-lg border border-dashed border-line bg-card hover:border-ink-3" title="Copy a link that opens exactly this scenario">{linkCopied ? "Link copied" : "Share scenario"}</button>
           <p className="basis-full text-[11px] text-ink-3 sm:text-right">{activePreset ? PRESETS[activePreset].blurb : "Custom scenario — adjust the levers below to test your own plan."}</p>
         </div>
-        <button type="button" onClick={() => setCreateOpen(true)} className="absolute right-0 top-0 text-xs px-2.5 py-1.5 rounded-lg border border-[var(--s-gym)] bg-[var(--s-gym)] text-white hover:brightness-95">My Launch Cockpit</button>
+        <button type="button" onClick={() => setCreateOpen(true)} title="Build your own case study with AI" aria-label="Build your own case study with AI" className="absolute right-0 top-0 text-xs px-2.5 py-1.5 rounded-lg border border-[var(--s-gym)] bg-[var(--s-gym)] text-white hover:brightness-95">My Launch Cockpit</button>
       </header>
+
+      <section className="flex flex-wrap items-center justify-between gap-3 rounded-xl bg-card px-4 py-3 shadow-[0_1px_3px_rgba(16,16,16,0.06)]" aria-label="Decision workspace tools">
+        <div><p className="text-xs font-semibold uppercase tracking-wide text-ink-3">Decision lens</p><p className="text-xs text-ink-2">Prioritise the questions your role must answer.</p></div>
+        <div className="flex flex-wrap gap-1.5">{(["CEO", "CFO", "CMO", "COO"] as const).map((r) => <button key={r} type="button" onClick={() => setLens(r)} aria-pressed={lens === r} className={`rounded-lg border px-2.5 py-1 text-xs font-semibold ${lens === r ? "bg-ink text-white border-ink" : "border-line hover:border-ink-3"}`}>{r}</button>)}<button type="button" onClick={() => { setSaved(true); window.setTimeout(() => setSaved(false), 1800); }} className="rounded-lg border border-dashed border-line px-2.5 py-1 text-xs">{saved ? "Saved locally" : "Save snapshot"}</button></div>
+        <p className="basis-full text-xs text-ink-2"><strong className="text-ink">{lens} lens:</strong> {lens === "CEO" ? "balance growth, strategic fit, and downside risk." : lens === "CFO" ? "stress-test cash, margin, payback, and assumptions." : lens === "CMO" ? "protect positioning, demand quality, and channel reach." : "translate the recommendation into gates, owners, and execution milestones."}</p>
+      </section>
 
       {createOpen && <CreateScenarioDialog onClose={() => setCreateOpen(false)} />}
 

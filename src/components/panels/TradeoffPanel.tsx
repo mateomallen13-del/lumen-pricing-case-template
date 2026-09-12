@@ -20,7 +20,7 @@ export default function TradeoffPanel({ scenario, result }: { scenario: Scenario
               <LineChart data={sweep} margin={{ top: 8, right: 12, bottom: 0, left: -12 }}>
                 <CartesianGrid vertical={false} />
                 {lo !== undefined && <ReferenceArea x1={lo} x2={hi} fill="var(--s-gym)" fillOpacity={0.08} />}
-                <XAxis dataKey="price" type="number" domain={[1.3, 3.1]} tickFormatter={(v) => `€${v.toFixed(2)}`} ticks={[1.5, 1.79, 2.19, 2.59, 3.0]} />
+                <XAxis dataKey="price" type="number" domain={[1.3, 3.1]} tickFormatter={(v) => `€${v.toFixed(2)}`} ticks={[1.5, 1.79, 2.19, 2.59, 3.0]} angle={-28} textAnchor="end" height={48} tick={{ fontSize: 10 }} />
                 <YAxis domain={[0, 36]} tickFormatter={(v) => `${v}`} />
                 <Tooltip {...tip} formatter={(v) => [`${Number(v).toFixed(1)} months`, "Payback"]} labelFormatter={(l) => `Price ${fmtEur(Number(l))}`} />
                 <ReferenceLine x={scenario.price} stroke="var(--ink)" strokeWidth={1} />
@@ -37,7 +37,7 @@ export default function TradeoffPanel({ scenario, result }: { scenario: Scenario
               <LineChart data={sweep} margin={{ top: 8, right: 12, bottom: 0, left: -12 }}>
                 <CartesianGrid vertical={false} />
                 <ReferenceArea x1={2.1} x2={2.72} fill="var(--s-retail)" fillOpacity={0.08} label={{ value: "VoltFit band", position: "insideTop", fontSize: 10, fill: "var(--ink-3)" }} />
-                <XAxis dataKey="price" type="number" domain={[1.3, 3.1]} tickFormatter={(v) => `€${v.toFixed(2)}`} ticks={[1.5, 1.79, 2.19, 2.59, 3.0]} />
+                <XAxis dataKey="price" type="number" domain={[1.3, 3.1]} tickFormatter={(v) => `€${v.toFixed(2)}`} ticks={[1.5, 1.79, 2.19, 2.59, 3.0]} angle={-28} textAnchor="end" height={48} tick={{ fontSize: 10 }} />
                 <YAxis domain={[0, 1]} tickFormatter={(v) => `${Math.round(v * 100)}%`} />
                 <Tooltip {...tip} formatter={(v) => [`${Math.round(Number(v) * 100)}%`, "Acceptance"]} labelFormatter={(l) => `Price ${fmtEur(Number(l))}`} />
                 <ReferenceLine x={scenario.price} stroke="var(--ink)" strokeWidth={1} />

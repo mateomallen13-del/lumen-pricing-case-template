@@ -41,7 +41,7 @@ export default function PricingPanel({ result: r }: { result: Result }) {
             <ResponsiveContainer>
               <BarChart data={withLumen} margin={{ top: 18, right: 8, bottom: 0, left: -16 }} barSize={22}>
                 <CartesianGrid vertical={false} />
-                <XAxis dataKey="name" />
+                <XAxis dataKey="name" angle={-28} textAnchor="end" height={48} interval={0} tick={{ fontSize: 10 }} />
                 <YAxis domain={[0, 3.5]} tickFormatter={(v) => `€${v}`} />
                 <Tooltip {...tip} formatter={(v, _n, p) => [`${fmtEur(Number(v))} · ${(p.payload as { positioning: string }).positioning}`, ""]} />
                 <ReferenceLine y={vw.pmc ?? 0} stroke="var(--ink-3)" strokeWidth={1} />
