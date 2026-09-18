@@ -16,7 +16,7 @@ export default function TimingPanel({ scenario, onPick }: { scenario: Scenario; 
         <ResponsiveContainer>
           <BarChart data={rows} margin={{ top: 16, right: 4, bottom: 0, left: -20 }} barSize={16} onClick={(e) => { const idx = (e as { activeTooltipIndex?: number | string })?.activeTooltipIndex; if (idx !== undefined && idx !== null) onPick(Number(idx) + 1); }} style={{ cursor: "pointer" }}>
             <CartesianGrid vertical={false} />
-            <XAxis dataKey="label" />
+            <XAxis dataKey="label" interval={0} tick={{ fontSize: 10 }} />
             <YAxis domain={[0, 150]} />
             <Tooltip {...tip} formatter={(v, _n, p) => { const d = p.payload as { promos: number; homeIndex: number; tempC: number }; return [`index ${v} · home markets ${d.homeIndex} · ${d.tempC}°C · ${d.promos} competitor promo${d.promos === 1 ? "" : "s"}`, ""]; }} />
             <Bar dataKey="index" radius={[4, 4, 0, 0]} isAnimationActive={false}>
